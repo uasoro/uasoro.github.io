@@ -1,0 +1,374 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    user-select: none;
+    /* background-color: #333; */
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+    width: 400px;
+    height: 500px;
+    perspective: 1000px;
+    opacity: 0.8;
+    transition: opacity .6s ease-in-out;
+}
+
+.card:hover {
+    opacity: 1;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+}
+
+.card-inner.reverse {
+    transform: rotateY(-180deg);
+}
+
+
+.card-front, .card-back {
+    position: absolute;
+    /* width: 100%; */
+    height: 100%;
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    inset: 0;
+}
+
+.card-front {
+    background: #141414;
+    border-radius: 25px;
+    color: #fff;
+    text-shadow: 0 0 10px #fff;
+}
+
+.avatar img {
+    width: 180px;
+    height: auto;
+    border: 3px solid #abc5da;
+    border-radius: 100px;
+    filter: drop-shadow(0 0 0.75rem #abc5da);
+}
+
+
+.card-back {
+    /* background: #d1d1d1; */
+    background: #242424;
+    color: rgb(220, 220, 220);
+    transform: rotateY(180deg);
+    border-radius: 25px;
+    justify-content: flex-start;
+    flex-direction: column;
+    text-align: center;
+    font-size: 15px;
+    line-height: 1.5;
+    font-style: normal;
+    font-weight: bold;
+    padding: 3px;
+}
+
+.background-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+    transform: translate(-50%, -50%) scale(1.1);
+    filter: blur(15px) brightness(70%);
+}
+
+.background-video video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.lang {
+    border: none;
+    border-radius: 15px;
+    background-color: transparent;
+    color: transparent;
+    padding: 1px 5px 1px 5px;
+}
+
+.py {
+    background-color: #366d9a;
+    color: #ffce42;
+}
+
+.js {
+    background-color: #f4e11e;
+    color: #050708;
+}
+
+.ts {
+    background-color: #007acc;
+    color: #ffffff;
+}
+
+.light-text {
+    text-shadow: 0 0 15px #fff;
+}
+
+.light-text .py {
+    text-shadow: none;
+    box-shadow: 0 0 15px #366d9a;
+}
+
+.light-text .js {
+    text-shadow: none;
+    box-shadow: 0 0 15px #f4e11e;;
+}
+
+.light-text .ts {
+    text-shadow: none;
+    box-shadow: 0 0 15px #007acc;
+}
+
+.skills {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    vertical-align: middle;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.skills img {
+    width: 30px;
+    height: 30px;
+    object-fit: contain;
+    padding: 10px;
+}
+
+.react {
+    animation: react 10s infinite linear;
+    filter: drop-shadow(0 0 0.75rem #00bbd3);
+}
+
+.svelte {
+    /* animation: svelte 2s infinite; */
+    filter: drop-shadow(0 0 0.55rem #ff8059);
+}
+
+
+.typescript {
+    filter: drop-shadow(0 0 0.55rem #007acc);
+    border-radius:10px;
+}
+
+.cr {
+    filter: drop-shadow(0 0 0.55rem #007acc);
+    border-radius:40px;
+}
+
+
+.javascript {
+    filter: drop-shadow(0 0 0.55rem #f4e11e);
+    border-radius: 40px;
+}
+
+.python {
+    filter: drop-shadow(0 0 0.55rem #366b98);
+}
+
+.scss {
+    filter: drop-shadow(0 0 0.55rem #fd007a);
+    border-radius: 40px;
+}
+
+.vsc {
+    filter: drop-shadow(0 0 0.55rem #0179cb);
+}
+
+.wshtorm {
+    filter: drop-shadow(0 0 0.55rem #09b7d7);
+}
+
+.pycharm {
+    filter: drop-shadow(0 0 0.55rem #1ad78c)
+}
+
+.google {
+    filter: drop-shadow(0 0 0.55rem #ffffff);
+}
+
+.git {
+    filter: drop-shadow(0 0 0.55rem #ffffff);
+}
+
+.photoshop {
+    filter: drop-shadow(0 0 0.55rem #001e36);
+}
+
+.disable-shadow {
+    filter: none !important;
+    text-shadow: none !important;
+    box-shadow: none !important;
+}
+
+span a {
+    text-decoration: underline #007acc;
+    text-align: center;
+    color: #188ae7;
+}
+
+.links {
+    display: flex;
+    justify-content: start;
+    flex-direction: row;
+    vertical-align: middle;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.links img {
+    width: 40px;
+    height: auto;
+    padding: 5px;
+}
+
+.links a {
+    position: relative;
+    z-index: 2;
+    cursor: pointer;
+}
+
+.links a::before {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 7.5px;
+    left: 7.5px;
+    right: 7.5px;
+    bottom: 7.5px;
+    border-radius: 100px;
+    background: linear-gradient(100deg, #5f5e75, #242b74);
+    filter: blur(8px);
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.links a:hover::before {
+    opacity: 1;
+}
+
+.super-text {
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #ff8c00, #ff0080);
+    background-size: 200% 200%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradient-animation 5s infinite linear;
+    text-shadow: none;
+}
+
+button {
+    margin: 10px auto;
+    padding: 5px;
+    border: none;
+    outline: none;
+    background-color: #188ae7;
+    border-radius: 10px;
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0f7bd4;
+    opacity: 0.7;
+}
+
+button:active {
+   transform: scale(0.95);
+}
+
+.back-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.lightBtn {
+    background-color: #eded21;
+    color: #000;
+}
+.lightBtn:hover {
+    background-color: #eded21;
+}
+
+/* .card-back button {
+    margin-top: 15%;
+} */
+
+@keyframes gradient-animation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+@keyframes react {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(720deg);
+    }
+}
+
+/* @keyframes svelte {
+    0% { transform: rotate(0deg); }
+    50% { transform: rotate(-20deg); }
+    100% { transform: rotate(20deg); }
+} */
+
+@media (max-width: 768px) {
+    .card {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        align-self: center;
+        width: 300px;
+        height: 400px;
+        margin: 20px 20px 20px 20px;
+    }
+
+    .card-front, .card-back {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    .card-front img {
+        width: 100px;
+    }
+
+    .card-back {
+        height: 500px;
+    }
+
+    .links img {
+        width: 30px;
+    }
+}
