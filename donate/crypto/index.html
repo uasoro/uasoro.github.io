@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <link rel="icon" type="image/ico" href="icons/donateicon.svg">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>uasoro</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div class="preloader" id="preloader">
+        <div>
+        <img src=".\icons\sueta.webp" height="52" alt="sueta"/>
+        </div>
+		<img src=".\icons\l.svg" class="load" height="20" alt="sueta"/>
+
+    </div>
+    
+    <script type="text/javascript">
+
+        window.onload = function() {
+    
+            setTimeout(function() {
+    
+                document.getElementById("preloader").classList.add("fade-out");
+    
+            }, 400);
+    
+        };
+    
+    </script>
+    <div class="background-video">
+        <video autoplay loop muted>
+        </video>
+    </div>
+    <div class="container">
+		<h2 class="text">Донат для cryptoeb</h2>
+		<div class="rectangle">
+			<section class="sec">
+                <img class="but1" src="icons/bitcoin.png" alt="Bitcoin">
+                <h2 class="btc">BTC</h2>
+                <p class="p"><code>bc1qqrq49y0s2kraqncezlm26nhyrxfsayvh9v8d3y </code><button class="cc"><img class="copy" onclick="copybtc()" src="icons/copy.png"></button></p>
+                <img class="but" src="icons/bitcoin.png" alt="Bitcoin">
+            </section>
+			<section class="sec">
+                <img class="but1" src="icons/eth.png" alt="Ethereum">
+                <h2 class="eth">Ethereum (ETH, USDT)</h2>
+                <p class="p"><code>0xb24dE1359eB9250D54e0A69821b29b4A7D4E2615 </code><button class="cc"><img class="copy" onclick="copyeth()" src="icons/copy.png"></button></p>
+                <img class="but" src="icons/eth.png" alt="Ethereum">
+            </section>
+			<section class="sec">
+                <img class="but1" src="icons/ton.png" alt="crypto">
+                <h2 class="ton">Toncoin (TON, GRAM, NOT)</h2>
+                <p class="p"><code>UQCObsF1KiO3UuS_SOIlCo24aZmTRaLA88IjSygnQOJDewnO </code><button class="cc"><img class="copy" onclick="copyton()" src="icons/copy.png"></button></p>
+                <img class="but" src="icons/ton.png" alt="crypto">
+            </section>
+            <section class="sec">
+                <img class="but1" src="icons/tron.png" alt="Lolzteam">
+                <h2 class="tron">Tron (USDT, TRX)</h2>
+                <p class="p"><code>TLVdNL63dfh5kivqYj2NQPPeTf5BiVmuik </code><button class="cc"><img class="copy" onclick="copytron()" src="icons/copy.png"></button></p>
+                <img class="but" src="icons/tron.png" alt="Lolzteam">
+            </section>
+            <section class="sec">
+                <img class="but1" src="icons/ltc.png" alt="Lolzteam">
+                <h2 class="ltc">Litecoin</h2>
+                <p class="p"><code>ltc1qhljuvv7e4u8wlf37nfj6kvsu6aqt2ms8qfqca6 </code><button class="cc"><img class="copy" onclick="copyltc()" src="icons/copy.png"></button></p>
+                <img class="but" src="icons/ltc.png" alt="Lolzteam">
+            </section>
+		</div>
+		<a href="https://uasoro.github.io/donate/"><h2 class="back">❮</h2></a>
+	</div>
+    <script src="js/script.js"></script>
+</body>
+</html>
