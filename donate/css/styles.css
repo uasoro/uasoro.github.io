@@ -1,0 +1,200 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    overflow: hidden;
+    z-index: -1;
+	transform: translate(-50%, -50%) scale(1.1);
+    filter: blur(15px);
+}
+
+.background-video video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    flex-direction: column;
+    transition: transform 0.5s ease-in-out;
+}
+
+.rectangle {
+    width: 600px;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #242424;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+	margin: 10px;
+}
+
+.text {
+    
+    color: rgb(190, 221, 255);
+    font-size: 24px;
+    margin-bottom: 20px;
+    filter: drop-shadow(0 0 0.15rem #203e54);
+}
+
+.h2
+{
+    color: #c57600;
+    filter: drop-shadow(0 0 0.15rem #674705);
+}
+
+.h2cb
+{
+    color: #008ecf;
+    filter: drop-shadow(0 0 0.15rem #004083);
+}
+
+.h2crypto
+{
+    color: #7aa899;
+    filter: drop-shadow(0 0 0.15rem #4a6b60);
+}
+
+.h2lolz
+{
+    color: #204e37;
+    filter: drop-shadow(0 0 0.15rem #0fa45a);
+}
+
+.sec {
+    width: 500px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #54617a;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+	margin: 10px;
+}
+
+.crbut {
+    position: absolute;
+    width: 35px;
+    border-radius: 100px;
+    top: 11px;
+    left: 430px;
+    right: 0;
+    bottom: 0;
+}
+
+.crbut1 {
+    position: absolute;
+    width: 35px;
+    border-radius: 100px;
+    top: 11px;
+    left: 35px;
+    right: 0;
+    bottom: 0;
+}
+
+.but {
+    position: absolute;
+    width: 35px;
+    top: 11px;
+    left: 430px;
+    right: 0;
+    bottom: 0;
+}
+
+.but1 {
+    position: absolute;
+    width: 35px;
+    top: 11px;
+    left: 35px;
+    right: 0;
+    bottom: 0;
+}
+
+.back {
+    position: absolute;
+    color: rgb(135, 158, 183);
+    font-size: 18px;
+    bottom: 20px;
+}
+
+.preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #33445d;
+    background:linear-gradient(0deg,#3b3a3d 15%,#485476 85%);
+    z-index: 99;
+    visibility: visible;
+    transition: opacity 0.5s ease-out, visibility 0.5s ease-out;
+   
+}
+
+.preloader div {
+    
+    width: 130px;
+    height: 80px;
+    
+    border-radius: 12px;
+    text-align: center;
+    
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    }
+
+
+.preloader.fade-out {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    }
+
+.load {
+    position: absolute;
+    z-index: 111110;
+    top: 700px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
